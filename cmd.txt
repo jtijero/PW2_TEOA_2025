@@ -7,3 +7,12 @@ dar permisos:
 	Set-ExcutionPolicy Restricted
 npm -v
 npm -install -g npm@latest
+
+mkdir prueba1
+cd prueba1
+npm init -y  //el -y carpeta todas las configuraciones predeterminadas
+npm install express  //Este comando descargará e instalará Express y sus dependencias en la carpeta node_modules
+touch app.js //creando un archivo .js
+*Escribir un código básico de Express*
+node app.js
+cd .. //para volver a la carpeta anterior
