@@ -1,0 +1,9 @@
+node -v
+npm -v 
+dar permisos:
+-->Poweshell como administrador:
+	Set-ExcutionPolicy RemoteSigned
+	npm -v
+	Set-ExcutionPolicy Restricted
+npm -v
+npm -install -g npm@latest
