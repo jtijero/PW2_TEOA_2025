@@ -1,1 +1,25 @@
-1
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos Comparativo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+  <h1>Gráficos Comparativos de COVID-19</h1>
+    
+  <select id="region1" onchange="fetchData()">
+        <option value="">Seleccione la Región 1</option>
+    </select>
+    
+  <select id="region2" onchange="fetchData()">
+        <option value="">Seleccione la Región 2</option>
+    </select>
+    
+    <canvas id="comparar"></canvas>
+</body>
+</html>
+
