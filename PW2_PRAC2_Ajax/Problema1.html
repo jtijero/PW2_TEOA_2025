@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparador de Regiones</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        .comparison-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-            gap: 20px;/* Espacio entre gráficos */
-            margin-top: 20px;
+        #mainChart {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
         }
         
-        /* Estilo contenedor de gráficos */
-        .chart-box {
-            border: 1px solid #ddd; /* Borde sutil */
-            padding: 15px;/* Espacio interno */
-            border-radius: 8px;/* Esquinas redondeadas */
+        #regionSelector {
+            width: 200px;
+            padding: 8px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <div>
-        <select id="region1"></select>
-        <select id="region2"></select>
-        <button onclick="loadComparison()">Comparar</button>
+        <select id="regionSelector" multiple>
+            <option disabled>Seleccione 2+ regiones</option>
+        </select>
+        <button onclick="actualizarGrafico()">Comparar - Actualizar Gráfico</button>
     </div>
 
-    <div class="comparison-container"> <!-- Contenedores individuales para cada gráfico -->
-        <div class="chart-box">
-            <canvas id="chartRegion1"></canvas>
-        </div>
-        <div class="chart-box">
-            <canvas id="chartRegion2"></canvas>
-        </div>
+    <div id="mainChart">
+        <canvas id="combinedChart"></canvas>
     </div>
 
     <script src="js/script1.js"></script>
