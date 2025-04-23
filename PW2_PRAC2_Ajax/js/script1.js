@@ -1,75 +1,90 @@
-let charts = {};
+let graficoCombinado = null;
+const PALETA_COLORES = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD', '#6B5B95'];
 
-async function fetchData() {
-    const response = await fetch('data.json'); // Fetch API para cargar datos
-    return await response.json();
+async function obtenerDatos() {
+    const respuesta = await fetch('data.json');
+    return await respuesta.json();
 }
 
-function createChart(ctx, regionData, color) {
-    return new Chart(ctx, { // Constructor de Chart.js
+function generarConfiguracion(regionesSeleccionadas, datosCompletos) {
+    const conjuntosDatos = regionesSeleccionadas.map((region, indice) => {
+        const datosRegion = datosCompletos.find(r => r.region === region);
+        return {
+            label: region,
+            data: datosRegion.confirmed.map(d => parseInt(d.value)),
+            borderColor: PALETA_COLORES[indice % PALETA_COLORES.length],
+            tension: 0.2,
+            pointRadius: 3,
+            borderWidth: 2
+        };
+    });
+
+    return {
         type: 'line',
         data: {
-            labels: regionData.confirmed.map(d => d.date),
-            datasets: [{
-                label: `Casos en ${regionData.region}`,
-                data: regionData.confirmed.map(d => parseInt(d.value)), // Valores numéricos
-                borderColor: color,
-                tension: 0.1,
-                pointRadius: 2
-            }]
+            labels: datosCompletos[0].confirmed.map(d => d.date),
+            datasets: conjuntosDatos
         },
         options: {
             responsive: true,
+            interaction: {
+                mode: 'nearest',
+                intersect: false
+            },
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: {
+                    mode: 'index',
+                    callbacks: {
+                        title: (ctx) => `Fecha: ${ctx[0].label}`,
+                        label: (ctx) => `${ctx.dataset.label}: ${ctx.formattedValue} casos`
+                    }
+                }
+            },
             scales: {
+                x: {
+                    ticks: { autoSkip: true, maxTicksLimit: 20 },
+                    grid: { color: '#f5f5f5' }
+                },
                 y: {
                     title: { display: true, text: 'Casos Confirmados' },
-                    beginAtZero: true
-                },
-                x: {
-                    ticks: { maxTicksLimit: 15 },
-                    grid: { display: false }
+                    beginAtZero: true,
+                    grid: { color: '#f5f5f5' }
                 }
             }
         }
+    };
+}
+
+async function inicializar() {
+    const datos = await obtenerDatos();
+    const selector = document.getElementById('regionSelector');
+    
+    datos.forEach(region => {
+        const opcion = document.createElement('option');
+        opcion.value = region.region;
+        opcion.textContent = region.region;
+        selector.appendChild(opcion);
     });
 }
 
-async function init() {
-    const data = await fetchData();
-    const regions = data.map(r => r.region);
+async function actualizarGrafico() {
+    const datos = await obtenerDatos();
+    const regionesSeleccionadas = Array.from(document.getElementById('regionSelector').selectedOptions)
+                                 .map(opcion => opcion.value);
     
-    // Llenar selects
-    const select1 = document.getElementById('region1');
-    const select2 = document.getElementById('region2');
+    if (regionesSeleccionadas.length < 1) {
+        alert('Selecciona al menos 1 región');
+        return;
+    }
+
+    if (graficoCombinado) graficoCombinado.destroy();
     
-    regions.forEach(region => { // Iteración sobre regiones
-        [select1, select2].forEach(select => {
-            const option = document.createElement('option');
-            option.value = region; // Valor para backend
-            option.textContent = region; //
-            select.appendChild(option);
-        });
-    });
+    const contexto = document.getElementById('combinedChart').getContext('2d');
+    const configuracion = generarConfiguracion(regionesSeleccionadas, datos);
+    
+    graficoCombinado = new Chart(contexto, configuracion);
 }
 
-async function loadComparison() {
-    const data = await fetchData(); // Recarga datos actualizados
-    const region1 = document.getElementById('region1').value;
-    const region2 = document.getElementById('region2').value;
-    
-    // Destruir gráficos anteriores
-    Object.values(charts).forEach(chart => chart.destroy());
-    
-    // Crear nuevos gráficos
-    const ctx1 = document.getElementById('chartRegion1');
-    const ctx2 = document.getElementById('chartRegion2');
-    
-    const data1 = data.find(r => r.region === region1);
-    const data2 = data.find(r => r.region === region2);
-    
-    charts.region1 = createChart(ctx1, data1, '#FF6384');
-    charts.region2 = createChart(ctx2, data2, '#36A2EB');
-}
-
-// Inicialización
-init();
+// Inicializar
+inicializar();
