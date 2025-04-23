@@ -1,4 +1,7 @@
-PW2_PRAC1_GoogleAppsScript: 
-Actividad: En grupos de 2 alumnos buscar un problema e intentar implementar una solución con JavaScript y Google App Script. No importa si no funciona totalmente, pero intentan crearla y que trabaje.(esta actividad esta en un repositorio individual)
-PW2_PRAC2_Ajax:
-Actividad: Para cada uno de estos problemas implemente un programa en ajax y página que: problema1. Haga gráficos comparativos entre regiones elegidas por el usuario. problema2. Visualice un gráfico comparativo del crecimiento en regiones excepto Lima y Callao, mostrando el número de confirmados por cada día.
+##Actividades:
+1. **PW2_PRAC1_GoogleAppsScript**
+   - **Descripción**: En grupos de 2 alumnos, buscar un problema e intentar implementar una solución utilizando JavaScript y Google App Script. No importa si la solución no funciona completamente, pero se debe intentar crearla y hacer que funcione.
+2. **PW2_PRAC2_Ajax**
+   - **Descripción**: Implementar un programa en AJAX y una página web para los siguientes problemas:
+     - **Problema 1**: Hacer gráficos comparativos entre regiones elegidas por el usuario.
+     - **Problema 2**: Visualizar un gráfico comparativo del crecimiento en regiones, excluyendo Lima y Callao, mostrando el número de confirmados por cada día.
