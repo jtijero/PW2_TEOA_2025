@@ -1,49 +1,75 @@
-let myChart;
+let charts = {};
 
-async function loadData() {
-    const response = await fetch('../data.json');
+async function fetchData() {
+    const response = await fetch('data.json');
     return await response.json();
 }
 
-function createChart(selectedRegions, data) {
-    const ctx = document.getElementById('myChart').getContext('2d');
-    
-    if (myChart) myChart.destroy();
-
-    myChart = new Chart(ctx, {
-        type: 'bar',
+function createChart(ctx, regionData, color) {
+    return new Chart(ctx, {
+        type: 'line',
         data: {
-            labels: selectedRegions.map(region => region.region),
+            labels: regionData.confirmed.map(d => d.date),
             datasets: [{
-                label: 'Casos Confirmados',
-                data: selectedRegions.map(region => 
-                    region.confirmed.reduce((sum, day) => sum + parseInt(day.value), 0)
-                ),
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)'
+                label: `Casos en ${regionData.region}`,
+                data: regionData.confirmed.map(d => parseInt(d.value)),
+                borderColor: color,
+                tension: 0.1,
+                pointRadius: 2
             }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    title: { display: true, text: 'Casos Confirmados' },
+                    beginAtZero: true
+                },
+                x: {
+                    ticks: { maxTicksLimit: 15 },
+                    grid: { display: false }
+                }
+            }
         }
     });
 }
 
 async function init() {
-    const data = await loadData();
-    const select = document.getElementById('regionSelect');
+    const data = await fetchData();
+    const regions = data.map(r => r.region);
     
-    data.forEach(region => {
-        const option = document.createElement('option');
-        option.value = region.region;
-        option.textContent = region.region;
-        select.appendChild(option);
+    // Llenar selects
+    const select1 = document.getElementById('region1');
+    const select2 = document.getElementById('region2');
+    
+    regions.forEach(region => {
+        [select1, select2].forEach(select => {
+            const option = document.createElement('option');
+            option.value = region;
+            option.textContent = region;
+            select.appendChild(option);
+        });
     });
 }
 
-async function updateChart() {
-    const data = await loadData();
-    const selected = Array.from(document.getElementById('regionSelect').selectedOptions)
-        .map(opt => data.find(r => r.region === opt.value));
+async function loadComparison() {
+    const data = await fetchData();
+    const region1 = document.getElementById('region1').value;
+    const region2 = document.getElementById('region2').value;
     
-    createChart(selected, data);
+    // Destruir gráficos anteriores
+    Object.values(charts).forEach(chart => chart.destroy());
+    
+    // Crear nuevos gráficos
+    const ctx1 = document.getElementById('chartRegion1');
+    const ctx2 = document.getElementById('chartRegion2');
+    
+    const data1 = data.find(r => r.region === region1);
+    const data2 = data.find(r => r.region === region2);
+    
+    charts.region1 = createChart(ctx1, data1, '#FF6384');
+    charts.region2 = createChart(ctx2, data2, '#36A2EB');
 }
 
+// Inicialización
 init();

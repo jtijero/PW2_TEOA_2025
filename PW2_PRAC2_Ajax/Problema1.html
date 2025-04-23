@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comparación de Regiones</title>
+    <title>Comparador de Regiones</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .chart-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <select id="regionSelect" multiple></select>
-    <button onclick="updateChart()">Generar Gráfico</button>
-    <canvas id="myChart"></canvas>
+    <div>
+        <select id="region1"></select>
+        <select id="region2"></select>
+        <button onclick="loadComparison()">Comparar</button>
+    </div>
+    
+    <div class="comparison-container">
+        <div class="chart-box">
+            <canvas id="chartRegion1"></canvas>
+        </div>
+        <div class="chart-box">
+            <canvas id="chartRegion2"></canvas>
+        </div>
+    </div>
+
     <script src="js/script1.js"></script>
 </body>
 </html>
