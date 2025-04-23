@@ -1,6 +1,6 @@
-##Actividades:
+## Actividades:
 1. **PW2_PRAC1_GoogleAppsScript**
-   - **Descripción**: En grupos de 2 alumnos, buscar un problema e intentar implementar una solución utilizando JavaScript y Google App Script. No importa si la solución no funciona completamente, pero se debe intentar crearla y hacer que funcione.
+   - **Descripción**: En grupos de 2 alumnos, buscar un problema e intentar implementar una solución utilizando JavaScript y Google App Script. No importa si la solución no funciona completamente, pero se debe intentar crearla y hacer que funcione.(esta actividad esta en un repositorio publico aparte)
 2. **PW2_PRAC2_Ajax**
    - **Descripción**: Implementar un programa en AJAX y una página web para los siguientes problemas:
      - **Problema 1**: Hacer gráficos comparativos entre regiones elegidas por el usuario.
