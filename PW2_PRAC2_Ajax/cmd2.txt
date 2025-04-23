@@ -1,4 +1,6 @@
 node -v
 npm -v
 npm install chart.js
+npm install -g serve //instala servidor local
+npx serve //Esto iniciará un servidor en http://localhost:3000
 

@@ -6,14 +6,16 @@
     <style>
         .comparison-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+            gap: 20px;/* Espacio entre gráficos */
             margin-top: 20px;
         }
+        
+        /* Estilo contenedor de gráficos */
         .chart-box {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
+            border: 1px solid #ddd; /* Borde sutil */
+            padding: 15px;/* Espacio interno */
+            border-radius: 8px;/* Esquinas redondeadas */
         }
     </style>
 </head>
@@ -23,8 +25,8 @@
         <select id="region2"></select>
         <button onclick="loadComparison()">Comparar</button>
     </div>
-    
-    <div class="comparison-container">
+
+    <div class="comparison-container"> <!-- Contenedores individuales para cada gráfico -->
         <div class="chart-box">
             <canvas id="chartRegion1"></canvas>
         </div>

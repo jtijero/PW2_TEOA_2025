@@ -1,18 +1,18 @@
 let charts = {};
 
 async function fetchData() {
-    const response = await fetch('data.json');
+    const response = await fetch('data.json'); // Fetch API para cargar datos
     return await response.json();
 }
 
 function createChart(ctx, regionData, color) {
-    return new Chart(ctx, {
+    return new Chart(ctx, { // Constructor de Chart.js
         type: 'line',
         data: {
             labels: regionData.confirmed.map(d => d.date),
             datasets: [{
                 label: `Casos en ${regionData.region}`,
-                data: regionData.confirmed.map(d => parseInt(d.value)),
+                data: regionData.confirmed.map(d => parseInt(d.value)), // Valores numéricos
                 borderColor: color,
                 tension: 0.1,
                 pointRadius: 2
@@ -42,18 +42,18 @@ async function init() {
     const select1 = document.getElementById('region1');
     const select2 = document.getElementById('region2');
     
-    regions.forEach(region => {
+    regions.forEach(region => { // Iteración sobre regiones
         [select1, select2].forEach(select => {
             const option = document.createElement('option');
-            option.value = region;
-            option.textContent = region;
+            option.value = region; // Valor para backend
+            option.textContent = region; //
             select.appendChild(option);
         });
     });
 }
 
 async function loadComparison() {
-    const data = await fetchData();
+    const data = await fetchData(); // Recarga datos actualizados
     const region1 = document.getElementById('region1').value;
     const region2 = document.getElementById('region2').value;
     
