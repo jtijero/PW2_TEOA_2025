@@ -1,1 +1,29 @@
-2
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Comparativo Regional (Excl. Lima/Callao)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div id="panel-seleccion">
+            <div>
+                <select id="regionSelector" multiple>
+                    <option disabled>Seleccione 2 o más regiones</option>
+                </select>
+                <button class="boton-comparar" onclick="actualizarGrafico()">Generar comparativa</button>
+            </div>
+            <div class="contenedor-grafico">
+              <canvas id="combinedChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script2.js"></script>
+</body>
+</html>
