@@ -6,7 +6,66 @@
     <title>Análisis Comparativo Regional (Excl. Lima/Callao)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+              .contenedor-principal {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        #panel-seleccion {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        #regionSelector {
+            height: 450px;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            background: white;
+        }
+        
+        .boton-comparar {
+            padding: 12px 24px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .boton-comparar:hover {
+            background: #357abd;
+            transform: translateY(-1px);
+        }
 
+        .contenedor-grafico {
+            height: 450px;
+            position: relative;
+            background: white;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 1rem;
+        }
+
+        /* Ajustar grid principal */
+        #panel-seleccion {
+            grid-template-columns: 280px 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        /* Altura fija para el canvas */
+        #combinedChart {
+            height: 100%!important;
+            width: 100%!important;
+    }
     </style>
 </head>
 <body>
