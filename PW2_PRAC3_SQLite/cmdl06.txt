@@ -1,0 +1,5 @@
+npm init -y //genera package.json
+npm install express@5.0.0 --save
+npm install sqlite3@5.1.6 --save
+npm install cors@2.8.5 --save
+node server.js
