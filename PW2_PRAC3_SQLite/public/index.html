@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador Simple de Películas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 1rem auto;
+            padding: 0 1rem;
+        }
+        
+        .buscador {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .resultado {
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        
+        .titulo {
+            margin: 0;
+            color: #333;
+        }
+        
+        .ano {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <input 
+        type="text" 
+        class="buscador" 
+        placeholder="Buscar películas..."
+    >
+    <div id="resultados"></div>
+
+    <script>
+        const buscador = document.querySelector('.buscador');
+        const resultados = document.getElementById('resultados');
+
+        buscador.addEventListener('input', async (e) => {
+            const termino = e.target.value.trim();
+            
+            if(termino) {
+                try {
+                    const respuesta = await fetch(`/peliculas?busqueda=${encodeURIComponent(termino)}`);
+                    const peliculas = await respuesta.json();
+                    
+                    resultados.innerHTML = peliculas.map(p => `
+                        <div class="resultado">
+                            <h3 class="titulo">${p.Title}</h3>
+                            <div class="ano">${p.Year}</div>
+                        </div>
+                    `).join('');
+                } catch {
+                    resultados.innerHTML = 'Error en la búsqueda';
+                }
+            } else {
+                resultados.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+</html>
