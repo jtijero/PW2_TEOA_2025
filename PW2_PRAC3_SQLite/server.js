@@ -19,7 +19,7 @@ app.get('/peliculas', (req, res) => {
     }
   );
 });
-
+  
 app.listen(8147, () => {
   console.log('Servidor simple listo');
 });
