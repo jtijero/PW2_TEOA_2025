@@ -1,0 +1,7 @@
+Transferencia de commits por equivocación de repositorio
+git remote add repo-a <URL_DEL_REPO_A> [en directorio local de repo B(este)]
+ git remote add PW2_Lab https://github.com/jtijero/PW2_LABA_2025.git
+git fetch PW2_Lab //Trae los commits del repositorio de origen
+git cherry-pick 9b7ae376a8b132bd774aa609af8dc54b94057c42
+git cherry-pick aff49d29739293cfd81fb2aa84d21fc18c8b24c2
+git cherry-pick 27528e53e4d04c81c2d052156b55ae5f11540408
