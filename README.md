@@ -5,5 +5,7 @@
    - **Descripción**: Implementar un programa en AJAX y una página web para los siguientes problemas:
      - **Problema 1**: Hacer gráficos comparativos entre regiones elegidas por el usuario.
      - **Problema 2**: Visualizar un gráfico comparativo del crecimiento en regiones, excluyendo Lima y Callao, mostrando el número de confirmados por cada día.
-1. **PW2_PRAC3_SQLite**
+3. **PW2_PRAC3_SQLite**
    - **Descripción**: Realice un ejemplo de sqlite libre, con la base de datos imdb.db, tendrá que usar ajax y json para la comunicación entre cliente y servidor; así como git para sus versiones. No es necesario que entregue un programa funcionando, pero si es importante que muestre los errores encontrados.
+4. **PW2_PRAC4_Django1**
+   - **Descripción**: En esta tarea deberá seguir las diapositivas de DJango01, dentro de un proyecto git local, deberá hacer un commit por cada paso, si desea puede usar branch. La entrega de la tarea consistirá de una captura de pantalla (png o jpg) del siguiente comando: git log --graph --pretty=oneline --abbrev-commit --all
