@@ -20,3 +20,23 @@ vim personas/models.py
 
 python manage.py makemigrations
 python manage.py migrate
+
+# 7. usuario
+python manage.py createsuperuser
+python manage.py runserver 127.0.0.1:8147
+ vim personas/admin.py
+//se edito para poder registrar a una Persona
+python manage.py runserver 127.0.0.1:8147
+//agregue 2 personas 
+
+# 8. agregando personas por consola
+python manage.py shell
+from personas.models import Persona
+Persona.objects.all()
+ Persona.objects.create(nombres="Lucciano", apellidos="Tijero Dávila", edad="19")
+ Persona.objects.all()
+exit()
+python manage.py runserver 127.0.0.1:8147
+
+//Ctrl c
+	
