@@ -1,0 +1,22 @@
+# 1. Crear y activar entorno virtual (si no existe)
+python -m venv destino
+.\destino\Scripts\Activate.ps1
+
+# 2. Instalar Django dentro del entorno ACTIVO
+pip install django
+
+# 3. Verificar instalación (debe mostrar versión)
+python -m django --version
+
+# 4. Navegar al directorio del proyecto
+cd src\listaContactos
+
+# 5. Ejecutar migraciones
+python manage.py migrate
+
+# 6. APP
+(destino) C:\Users\TIJERO\Desktop\PW2_TEOA_2025\PW2_PRAC4_Django1\src\listaContactos [main ≡ +1 ~4 -0 !]> django-admin startapp personas
+vim personas/models.py
+
+python manage.py makemigrations
+python manage.py migrate
