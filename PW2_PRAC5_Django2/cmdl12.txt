@@ -12,3 +12,6 @@ True
 Python manage.py migrate
 //Personalizando la página de inicio (se crea otra app para practicar)
 python manage.py startapp inicio
+//Registrando el URL de la nueva página de inicio (modificamos urls.py de listaContactos)
+//Peticiones y ruteos de URL [se analiza la relación entre patrones de URL y Vistas] (modificamos urls.py de listaContactos)
+//Agrego una nueva vista para la URL another(modificación de urls.py de listaContactos y views.py de inicio)
