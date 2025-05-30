@@ -1,0 +1,14 @@
+// python -m venv destino ya esta creado
+destino/Scripts/actívate
+// cambiando los tipos de campos en models.py con tios de datos mas apropiados
+python manage.py makemigrations
+Python manage.py migrate
+// se agrego una persona
+pyhton manage Shell
+//cambiando el modelo (agregando donador models.BooleanFields()) 
+python manage.py makemigrations
+opción 1 
+True
+Python manage.py migrate
+//Personalizando la página de inicio (se crea otra app para practicar)
+python manage.py startapp inicio
