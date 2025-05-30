@@ -18,3 +18,5 @@ python manage.py startapp inicio
 // argumento de la funciones de las vistas (modificación de views.py de inicio) [en consola de servidor aparece AnonimusUser]
 //Plantillas (Templates) de Django [creando mi plantilla basica] ((se modifican inicio/view.py listaContactos/settings.py, se crea dir templates y archivo templates/home.html)
 //Django template language (DTL): Variables (agrgamos variables entre llaves{} en templates/home.html)
+//Django template language (DTL): Tags (agregamos templates/base)
+//Tag extends se modifica carpeta templates/home
