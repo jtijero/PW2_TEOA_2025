@@ -20,3 +20,4 @@ python manage.py startapp inicio
 //Django template language (DTL): Variables (agrgamos variables entre llaves{} en templates/home.html)
 //Django template language (DTL): Tags (agregamos templates/base)
 //Tag extends se modifica carpeta templates/home
+// El tag include (se crea templates/nav.html y se modifica templates/base.html) verificando las opciones de navegacion
