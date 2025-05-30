@@ -17,3 +17,4 @@ python manage.py startapp inicio
 //Agrego una nueva vista para la URL another(modificación de urls.py de listaContactos y views.py de inicio)
 // argumento de la funciones de las vistas (modificación de views.py de inicio) [en consola de servidor aparece AnonimusUser]
 //Plantillas (Templates) de Django [creando mi plantilla basica] ((se modifican inicio/view.py listaContactos/settings.py, se crea dir templates y archivo templates/home.html)
+//Django template language (DTL): Variables (agrgamos variables entre llaves{} en templates/home.html)

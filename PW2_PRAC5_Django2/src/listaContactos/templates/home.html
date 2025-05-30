@@ -3,8 +3,16 @@
     <title>Templates Base</title>
   </head>
   <body>
-    <h1> Hello World desde Django Ltd</h1>
-    <h2> Con templates</h2>
+    <h1>Hello World desde Django</h1>
+    <h2>Con templates</h2>
+    
+    <p>Usuario: {{ request.user }}</p>
+    <p>Autenticado: {{ request.user.is_authenticated }}</p>
+    <p>Método HTTP: {{ request.method }}</p>
+    <p>Path: {{ request.path }}</p>
+    <p>GET params: {{ request.GET }}</p>
+    <p>POST params: {{ request.POST }}</p>
+    <p>Cookies: {{ request.COOKIES }}</p>
+    <p>Encabezados: {{ request.headers }}</p>
   </body>
-  
 </html>
