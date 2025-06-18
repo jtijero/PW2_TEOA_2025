@@ -25,3 +25,4 @@ Los objetos del modelo contienen los campos que definimos y algunos otros más h
 Modificaciones en personas
 Vista y template para personas agregación de template/personas/test.html /personas/views.py y modificación de listaContactos/urls.py
 encontrar una URL que coincida con la solicitud
+En lugar de crear un diccionario en la vista con los detalles del objeto, también se puede enviar el objeto entero
