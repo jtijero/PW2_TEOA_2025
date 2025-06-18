@@ -2,4 +2,7 @@ destino/Scripts/actívate
 
 Las variables del “contexto” en un template
  modificación de inicio/views.py y templates/home.html
+python manage.py runserver 127.0.0.1:8147
 
+El tag: FOR
+ modificación de función myHomeView en inicio/views.py y templates/home.html 
