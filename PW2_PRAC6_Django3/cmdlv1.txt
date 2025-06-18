@@ -13,4 +13,11 @@ El contador de ciclos
 El DTL también posee condicionales
  agregación de condicionales en for de home.html
  con operador '|' usamos upper
- agregamos tambien add:10000 y un contador de longitud   
+ agregamos tambien add:10000 y un contador de longitud 
+
+Los objetos del modelo contienen los campos que definimos y algunos otros más heredados del framework
+>>> from personas.models import Persona
+>>> Persona.objects.all()
+<QuerySet [<Persona: Persona object (1)>, <Persona: Persona object (2)>, <Persona: Persona object (3)>, <Persona: Persona object (4)>]>
+>>> obj = Persona.objects.get(id = 2)
+>>> dir(obj)  
