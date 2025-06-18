@@ -6,3 +6,6 @@ python manage.py runserver 127.0.0.1:8147
 
 El tag: FOR
  modificación de función myHomeView en inicio/views.py y templates/home.html 
+
+El contador de ciclos
+ inclusión de  un forloop.counter en <li> dentro del for in myList
