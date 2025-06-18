@@ -12,3 +12,5 @@ El contador de ciclos
 
 El DTL también posee condicionales
  agregación de condicionales en for de home.html
+ con operador '|' usamos upper
+ agregamos tambien add:10000 y un contador de longitud   

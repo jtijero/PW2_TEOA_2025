@@ -3,17 +3,18 @@
   <h2>Hello World desde Django</h2>
   <h3>Con templates</h3>
   <p>
-    {{myText}},
-    {{myNumber}}
+    {{myText|upper}},
+    {{myNumber| add:10000 }}
   </p>
   <ul>
     {% for myItem in myList %}
     <li>{{forloop.counter}} - {{ myItem }}
-    {% if myItem == 33 %}
+    {% if myItem == 3 %}
       - Este numero es magico
     {% elif myItem > 50 %}
       - Este numero es mayor que 50
     {% endif %}
+      - Longitud: {{ myItem|stringformat:"s"|length}}
     </li>
     {% endfor %}
   </ul>
