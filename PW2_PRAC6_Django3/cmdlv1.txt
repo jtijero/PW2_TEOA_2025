@@ -1,23 +1,5 @@
-// python -m venv destino ya esta creado
 destino/Scripts/actívate
-// cambiando los tipos de campos en models.py con tios de datos mas apropiados
-python manage.py makemigrations
-Python manage.py migrate
-// se agrego una persona
-pyhton manage Shell
-//cambiando el modelo (agregando donador models.BooleanFields()) 
-python manage.py makemigrations
-opción 1 
-True
-Python manage.py migrate
-//Personalizando la página de inicio (se crea otra app para practicar)
-python manage.py startapp inicio
-//Registrando el URL de la nueva página de inicio (modificamos urls.py de listaContactos)
-//Peticiones y ruteos de URL [se analiza la relación entre patrones de URL y Vistas] (modificamos urls.py de listaContactos)
-//Agrego una nueva vista para la URL another(modificación de urls.py de listaContactos y views.py de inicio)
-// argumento de la funciones de las vistas (modificación de views.py de inicio) [en consola de servidor aparece AnonimusUser]
-//Plantillas (Templates) de Django [creando mi plantilla basica] ((se modifican inicio/view.py listaContactos/settings.py, se crea dir templates y archivo templates/home.html)
-//Django template language (DTL): Variables (agrgamos variables entre llaves{} en templates/home.html)
-//Django template language (DTL): Tags (agregamos templates/base)
-//Tag extends se modifica carpeta templates/home
-// El tag include (se crea templates/nav.html y se modifica templates/base.html) verificando las opciones de navegacion
+
+Las variables del “contexto” en un template
+ modificación de inicio/views.py y templates/home.html
+
