@@ -9,3 +9,6 @@ El tag: FOR
 
 El contador de ciclos
  inclusión de  un forloop.counter en <li> dentro del for in myList
+
+El DTL también posee condicionales
+ agregación de condicionales en for de home.html
