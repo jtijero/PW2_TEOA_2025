@@ -21,3 +21,7 @@ Los objetos del modelo contienen los campos que definimos y algunos otros más h
 <QuerySet [<Persona: Persona object (1)>, <Persona: Persona object (2)>, <Persona: Persona object (3)>, <Persona: Persona object (4)>]>
 >>> obj = Persona.objects.get(id = 2)
 >>> dir(obj)  
+
+Modificaciones en personas
+Vista y template para personas agregación de template/personas/test.html /personas/views.py y modificación de listaContactos/urls.py
+encontrar una URL que coincida con la solicitud
