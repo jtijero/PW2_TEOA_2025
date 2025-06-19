@@ -28,5 +28,12 @@ Encontrar una URL que coincida con la solicitud
 Enviando el objeto entero en el contexto
  En lugar de crear un diccionario en la vista con los detalles del objeto, también se puede enviar el objeto entero
 
-Independizando la app personas y Creando plantilla dentro de la app
 creación de carpeta templates en app personas y copiando test.html de templates/personas/test.html y cambiándole de nombre a descripción.html
+
+Formularios en Django, en app personas
+creación de personas/forms.py y modificación de views.py
+tuvimos que cambiar en settings.py de listaContactos 'DIRS': [os.path.join(BASE_DIR,'personas'),], y ya no templates
+creación de personas/templates/personas/personasCreate.html ERROR
+En realidad personas/templates/agregar/personasCreate.html [para ello tambien se modifico tambien en views.py la función personaCreateView()]
+
+en personas/templates/personas/  va descripcion.html
