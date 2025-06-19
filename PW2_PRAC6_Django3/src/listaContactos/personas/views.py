@@ -20,3 +20,6 @@ def personaCreateView(request):
     'form': form
     }
   return render(request, 'agregar/personasCreate.html', context)
+
+def searchForHelp(request):
+  return render(request, 'personas/search.html', {})

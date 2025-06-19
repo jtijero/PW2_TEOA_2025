@@ -37,3 +37,6 @@ creación de personas/templates/personas/personasCreate.html ERROR
 En realidad personas/templates/agregar/personasCreate.html [para ello tambien se modifico tambien en views.py la función personaCreateView()]
 
 en personas/templates/personas/  va descripcion.html
+
+Templates con forms planos: GET
+creamos personas/search.html, una nueva vista (otra funcion) y asociar una url en listaContactos
