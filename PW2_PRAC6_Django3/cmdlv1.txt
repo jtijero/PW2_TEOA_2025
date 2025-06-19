@@ -43,3 +43,6 @@ creamos personas/search.html, una nueva vista (otra funcion) y asociar una url e
 
 Datos de GET y POST
 modificación de personasCreate.html y views.py en personas
+
+Templates con forms planos POST
+modificación de personasCreate.html, usamos crf_token
