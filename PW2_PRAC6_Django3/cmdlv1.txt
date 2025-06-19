@@ -40,3 +40,6 @@ en personas/templates/personas/  va descripcion.html
 
 Templates con forms planos: GET
 creamos personas/search.html, una nueva vista (otra funcion) y asociar una url en listaContactos
+
+Datos de GET y POST
+modificación de personasCreate.html y views.py en personas
