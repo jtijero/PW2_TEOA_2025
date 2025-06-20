@@ -56,3 +56,9 @@ Parte 4
 
 Objetos Form “planos” en Django
 modificaciones en views.py forms.py de personas y se registra en urls.py de listaContactos
+
+Parece que el formulario funciona, pero NO
+La base de datos ¡no se modificó!
+python manage.py Shell
+>>> from personas.models import Persona
+>>> Persona.objects.all()
