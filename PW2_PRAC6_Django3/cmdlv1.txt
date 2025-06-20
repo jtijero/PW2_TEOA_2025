@@ -62,3 +62,6 @@ La base de datos ¡no se modificó!
 python manage.py Shell
 >>> from personas.models import Persona
 >>> Persona.objects.all()
+
+Enviando los datos al formulario
+modificación de función personasAnotherCreateView haciendo ue los campos sean obligatorios
