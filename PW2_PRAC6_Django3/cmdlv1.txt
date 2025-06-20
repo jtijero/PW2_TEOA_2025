@@ -46,3 +46,5 @@ modificación de personasCreate.html y views.py en personas
 
 Templates con forms planos POST
 modificación de personasCreate.html, usamos crf_token
+
+Acciones distintas para GET y POST: modificación a función personaCreateView
