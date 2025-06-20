@@ -65,3 +65,6 @@ python manage.py Shell
 
 Enviando los datos al formulario
 modificación de función personasAnotherCreateView haciendo ue los campos sean obligatorios
+
+Diferenciando llamada POST y GET: Seguridad
+modificación de función personasAnotherCreateView haciendo que los campos sean sugeridos
