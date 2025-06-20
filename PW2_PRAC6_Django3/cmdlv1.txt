@@ -1,3 +1,5 @@
+Parte 3
+
 destino/Scripts/actívate
 
 Las variables del “contexto” en un template
@@ -48,3 +50,9 @@ Templates con forms planos POST
 modificación de personasCreate.html, usamos crf_token
 
 Acciones distintas para GET y POST: modificación a función personaCreateView
+
+
+Parte 4
+
+Objetos Form “planos” en Django
+modificaciones en views.py forms.py de personas y se registra en urls.py de listaContactos
