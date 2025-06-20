@@ -68,3 +68,5 @@ modificación de función personasAnotherCreateView haciendo ue los campos sean 
 
 Diferenciando llamada POST y GET: Seguridad
 modificación de función personasAnotherCreateView haciendo que los campos sean sugeridos
+
+Recibiendo data limpia en una vista
