@@ -70,3 +70,5 @@ Diferenciando llamada POST y GET: Seguridad
 modificación de función personasAnotherCreateView haciendo que los campos sean sugeridos
 
 Recibiendo data limpia en una vista
+Finalmente grabamos los datos
+Los dos ** delante de un diccionario significan: "tratar los pares clave-valor en el diccionario como argumentos nombrados adicionales para esta llamada de función".
