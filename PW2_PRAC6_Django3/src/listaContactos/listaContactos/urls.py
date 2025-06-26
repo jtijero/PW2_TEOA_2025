@@ -23,7 +23,7 @@ from personas.views import personaTestView, personaCreateView, searchForHelp, pe
 urlpatterns = [
     path('', myHomeView, name='PaginaInicio'),    
     path('people', personaTestView, name='personas'),
-    path('add', personaCreateView, name='agregar/'),
+    path('add', personaCreateView, name='agregar'),
     path('search', searchForHelp, name='buscar'),
     path('anotherAdd' , personasAnotherCreateView, name='OtroAgregarPersonas'),
     path('another', anotherView, name='otra'),

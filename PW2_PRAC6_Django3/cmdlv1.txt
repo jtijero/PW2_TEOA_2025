@@ -90,3 +90,6 @@ modificación de forms.py de personas en listaContactos
 Widgets
 Un widget es la representación de Django de un elemento de input HTML. El widget maneja la representación del HTML y la extracción de datos de un diccionario GET / POST que corresponde al widget.
 modificación de la clase RawPersonaForm
+
+Validación extra de campos: clean_<fieldname>()
+modificación de class PersonaForm: cada campo de una clase de Form es responsable no solo de validar los datos, sino tambien de limpiarlos; En la funcion vista personaCreateView(), asegúramos de que el formulario se esté creando y procesando correctamente.

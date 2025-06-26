@@ -12,10 +12,17 @@ def personaTestView(request):
 
 def personaCreateView(request):
   print(request)
-  if request.method == 'POST':
-    nombre = request.POST.get('q')
-    print(nombre)
-  context = {}
+  form = PersonaForm() 
+  if request.method == "POST":
+    nombre = request.POST.get('q')  
+    form = PersonaForm(request.POST)
+    if form.is_valid():
+            form.save()
+  else:
+        form = PersonaForm()
+  context = {
+    'form': form,
+  }
   return render(request, 'agregar/personasCreate.html', context)
 
 def searchForHelp(request):
