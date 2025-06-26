@@ -59,7 +59,7 @@ modificaciones en views.py forms.py de personas y se registra en urls.py de list
 
 Parece que el formulario funciona, pero NO
 La base de datos ¡no se modificó!
-python manage.py Shell
+python manage.py shell
 >>> from personas.models import Persona
 >>> Persona.objects.all()
 
@@ -72,3 +72,17 @@ modificación de función personasAnotherCreateView haciendo que los campos sean
 Recibiendo data limpia en una vista
 Finalmente grabamos los datos
 Los dos ** delante de un diccionario significan: "tratar los pares clave-valor en el diccionario como argumentos nombrados adicionales para esta llamada de función".
+
+python manage.py shell [(destino) C:\Users\TIJERO\Desktop\PW2_TEOA_2025\PW2_PRAC6_Django3\src\listaContactos [main ≡]> python manage.py shell]
+>>> from personas.models import Persona
+>>> Persona.objects.all()
+<QuerySet [<Persona: Persona object (1)>, <Persona: Persona object (2)>, <Persona: Persona object (3)>, <Persona: Persona object (4)>, <Persona: Persona object (5)>, <Persona: Persona object (6)>, <Persona: Persona object (7)>]>
+>>> obj = Persona.objects.get(id = 7)
+>>> obj.nombres
+'New2'
+>>>
+
+Campos en el formulario
+En un formulario, cada campo tiene una lógica de validación personalizada, junto con algunos otros hooks.
+Las opciones llamadas “core” están presentes en todos los tipos de campos.
+modificación de forms.py de personas en listaContactos	
