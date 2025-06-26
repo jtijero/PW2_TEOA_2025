@@ -104,3 +104,7 @@ modificación de vista personaCreateView()
 Ruteo Dinámico de URL
 Se desea navegar sobre los elementos almacenados en nuestro modelo.
 modificación de : listaContactos/urls.py, templates/personas/descripcion.html, y creación de vista personasShowObject en personas/views.py 
+
+Error 404: get_object_or_404
+Al navegar en los urls dinámicos podemos llegar a un objeto que no existe
+Modificacion de personas/views.py  + get_object_or_404
