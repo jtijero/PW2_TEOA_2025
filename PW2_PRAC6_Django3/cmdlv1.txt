@@ -100,3 +100,7 @@ En algún caso se podría desear que el formulario contenga datos que ya están 
 Valores iniciales para un campo del formulario
 se pueden proporcionar con el parámetro initial= estos anularán tanto los valores iniciales del campo de formulario como los valores de una instancia de modelo adjunta
 modificación de vista personaCreateView()
+
+Ruteo Dinámico de URL
+Se desea navegar sobre los elementos almacenados en nuestro modelo.
+modificación de : listaContactos/urls.py, templates/personas/descripcion.html, y creación de vista personasShowObject en personas/views.py 
