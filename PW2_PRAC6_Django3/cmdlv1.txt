@@ -93,3 +93,7 @@ modificación de la clase RawPersonaForm
 
 Validación extra de campos: clean_<fieldname>()
 modificación de class PersonaForm: cada campo de una clase de Form es responsable no solo de validar los datos, sino tambien de limpiarlos; En la funcion vista personaCreateView(), asegúramos de que el formulario se esté creando y procesando correctamente.
+
+Datos de iniciales de una instancia
+En algún caso se podría desear que el formulario contenga datos que ya están en nuestro modelo (por ejemplo en un blog). La opción instance, permite llenar el formulario con datos iniciales desde un objeto del modelo.
+
