@@ -86,3 +86,7 @@ Campos en el formulario
 En un formulario, cada campo tiene una lógica de validación personalizada, junto con algunos otros hooks.
 Las opciones llamadas “core” están presentes en todos los tipos de campos.
 modificación de forms.py de personas en listaContactos	
+
+Widgets
+Un widget es la representación de Django de un elemento de input HTML. El widget maneja la representación del HTML y la extracción de datos de un diccionario GET / POST que corresponde al widget.
+modificación de la clase RawPersonaForm
