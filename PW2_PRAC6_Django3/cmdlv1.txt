@@ -117,3 +117,7 @@ creacion de vita personasDeleteView y personasBorrar.html, agregacion del path e
 
 Redireccionando
 uso de redirect('../')
+
+Enlaces Dinámicos de URL
+Defina un metodo get_absolute_url() para decirle a Django como calcular la URL canónica del objeto
+Modificacion de clase Persona en personas/models.py y personasList.html

@@ -6,3 +6,6 @@ class Persona(models.Model):
     apellidos = models.CharField(max_length=100)
     edad = models.IntegerField()#(max_digits=3)
     donador = models.BooleanField()
+
+    def get_absolute_url(self):
+        return "/personas/" + str(self.id) + "/"
