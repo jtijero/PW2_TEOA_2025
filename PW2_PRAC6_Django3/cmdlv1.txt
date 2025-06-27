@@ -99,7 +99,7 @@ En algún caso se podría desear que el formulario contenga datos que ya están 
 
 Valores iniciales para un campo del formulario
 se pueden proporcionar con el parámetro initial= estos anularán tanto los valores iniciales del campo de formulario como los valores de una instancia de modelo adjunta
-modificación de vista personaCreateView()
+modificación de vi	sta personaCreateView()
 
 Ruteo Dinámico de URL
 Se desea navegar sobre los elementos almacenados en nuestro modelo.
@@ -108,3 +108,6 @@ modificación de : listaContactos/urls.py, templates/personas/descripcion.html, 
 Error 404: get_object_or_404
 Al navegar en los urls dinámicos podemos llegar a un objeto que no existe
 Modificacion de personas/views.py  + get_object_or_404
+
+Listando todos los objetos
+creacion de nueva vista llamada personasListView y personas/personasLista.html y agregamos el path: path('personas/', personasListView, name = 'listing'), en urls.py en listaContactos

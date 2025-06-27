@@ -21,9 +21,10 @@ from inicio.views import anotherView
 from personas.views import (
   personaTestView, 
   personaCreateView, 
-  #searchForHelp, 
+  searchForHelp, 
   personasAnotherCreateView,
   personasShowObject,
+  personasListView,
   )
 
 urlpatterns = [
@@ -33,6 +34,7 @@ urlpatterns = [
     path('personas/<int:myID>/', personasShowObject, name = 'browsing'),
     path('anotherAdd' , personasAnotherCreateView, name='OtroAgregarPersonas'),
     path('another', anotherView, name='otra'),
-    path('admin/', admin.site.urls)
-    #path('search', searchForHelp, name='buscar')
+    path('admin/', admin.site.urls),
+    path('search', searchForHelp, name='buscar'),
+    path('personas/', personasListView, name = 'listing'),
 ]
