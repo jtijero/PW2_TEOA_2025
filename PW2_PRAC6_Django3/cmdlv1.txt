@@ -111,3 +111,6 @@ Modificacion de personas/views.py  + get_object_or_404
 
 Listando todos los objetos
 creacion de nueva vista llamada personasListView y personas/personasLista.html y agregamos el path: path('personas/', personasListView, name = 'listing'), en urls.py en listaContactos
+
+Borrando Objetos
+creacion de vita personasDeleteView y personasBorrar.html, agregacion del path en listaContactos/urls.py
