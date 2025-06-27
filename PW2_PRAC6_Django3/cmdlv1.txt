@@ -114,3 +114,6 @@ creacion de nueva vista llamada personasListView y personas/personasLista.html y
 
 Borrando Objetos
 creacion de vita personasDeleteView y personasBorrar.html, agregacion del path en listaContactos/urls.py
+
+Redireccionando
+uso de redirect('../')
