@@ -1,15 +1,11 @@
 from django.urls import path
-from personas.views import (
-  #personaTestView, 
-  #personaCreateView,
-  #personasShowObject,
-  #personasDeleteView,
+from .views import (
   PersonaListView,
   )
   
-#app_name = 'personas'
+app_name = 'personas'
 urlpatterns = [ 
-    path('',PersonaListView.as_view(), name = 'persona-list'),
+    path('', PersonaListView.as_view(), name='persona_list'),
     #path('add/', personaCreateView, name='adding'),
     #path('<int:myID>/', personasShowObject, name = 'browsing'),
     #path('<int:myID>/delete/', personasDeleteView, name= 'deleting'),
