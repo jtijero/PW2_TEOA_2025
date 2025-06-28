@@ -125,3 +125,7 @@ Modificacion de clase Persona en personas/models.py y personasList.html
 Invirtiendo los URLs: absolute_url
 Una necesidad comun cuando se trabaja en un proyecto de Django es la posibilidad de obtener URL en sus formas finales, ya sea para incrustar en el contenido generado (URL de vistas y activos, URL mostradas al usuario, etc.) o para manejar el flujo de navegación en el lado del servidor (redirecciones, etc.)
 Modificacion de la funcion get_absolute_url en la clase Persona en personas/models.py()
+
+Espacio de nombres
+Se crea un archivo para que la misma app maneje sus URLs
+modificacion de listaContactos/urls.py y modificacion de la funcion get_absolute_url; creacion de personas/urls.py
