@@ -129,3 +129,10 @@ Modificacion de la funcion get_absolute_url en la clase Persona en personas/mode
 Espacio de nombres
 Se crea un archivo para que la misma app maneje sus URLs
 modificacion de listaContactos/urls.py y modificacion de la funcion get_absolute_url; creacion de personas/urls.py
+
+
+parte 5
+
+Usando ListView - Plantillas esperadas por las vistas base genéricas
+el como veremos el uso de estas vistas, supone la existencia de algunos archivos con nombres específicos
+modificaciones: personas/views.py, personas/urls.py, listaContactos/urls.py 

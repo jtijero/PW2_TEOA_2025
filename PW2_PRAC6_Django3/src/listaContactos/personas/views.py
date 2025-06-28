@@ -1,5 +1,13 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render#, get_object_or_404, redirect
+from django.views.generic.list import (
+    ListView
+    )
 from .models import Persona
+
+class PersonaListView(ListView):
+  model = Persona
+
+'''
 from .forms import PersonaForm, RawPersonaForm
 
 # Create your views here.
@@ -64,3 +72,4 @@ def personasDeleteView(request, myID):
     'objeto': obj,
     }
   return render(request, 'personas/personasBorrar.html', context)
+'''
