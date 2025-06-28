@@ -140,3 +140,7 @@ modificaciones: personas/views.py, personas/urls.py, listaContactos/urls.py
 Plantilla para ListView
 modificaciones: templates/base.html y en la funcion get_absolute_url dentro de la clase Persona en personas/models.py - kwargs={'myID': self.id}
 creacion de plantilla personas/persona_list.html
+
+Filtros
+Un queryset es el resultado de hacer un filtro a los objetos, al estilo de un select en SQL
+modificacion de vista PersonaListView + queryset
