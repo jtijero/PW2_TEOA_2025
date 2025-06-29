@@ -159,3 +159,6 @@ Una versión perezosamente evaluada de reverse()
 Perezosa se refiere a que no se llega a ejecutar a menos que sea necesario
 creacion de personas/persona_confirm_delete.html; modificaciones: creacion de vista PersonaDeleteView y agregacion de path en urls.py
 
+La vista base View
+La clase View es la vista base de todas las demás
+nueva vista PersonaQueryView() e import HttpResponse, agregacion de path
