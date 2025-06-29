@@ -146,4 +146,8 @@ Un queryset es el resultado de hacer un filtro a los objetos, al estilo de un se
 modificacion de vista PersonaListView + queryset
 
 Implementando el método get_absolute_url - DetailView
-modificaciones: personas/urls.py +path de PersonaDetailView; personas/views.py +nueva vista llamada PersonaDetailView; models.py + kwargs; personas/persona_detail.html +Detalle de cad Persona
+modificaciones: personas/urls.py +path de PersonaDetailView; personas/views.py +nueva vista llamada PersonaDetailView; models.py + kwargs; personas/persona_detail.html +Detalle de cada Persona
+
+CreateView
+modificaciones: personas/urls.py +path; views.py + class PersonaCreateView(); personas/persona_form.html
+
