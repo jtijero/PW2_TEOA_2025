@@ -9,4 +9,4 @@ class Persona(models.Model):
     donador = models.BooleanField()
 
     def get_absolute_url(self):
-        return reverse('personas:persona_list',) #kwargs={'myID': self.id})
+        return reverse('personas:persona_detail', kwargs = {'pk': self.id})
