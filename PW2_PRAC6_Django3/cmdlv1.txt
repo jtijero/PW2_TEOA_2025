@@ -151,3 +151,6 @@ modificaciones: personas/urls.py +path de PersonaDetailView; personas/views.py +
 CreateView
 modificaciones: personas/urls.py +path; views.py + class PersonaCreateView(); personas/persona_form.html
 
+UpdateView
+reutiliza el formulario de CreateView >> creacion de vista, agreagacion de url (path en urls.py)
+
