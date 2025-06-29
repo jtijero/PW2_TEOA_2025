@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import View
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.generic import (
     ListView,
     DetailView,
@@ -43,4 +43,5 @@ class PersonaDeleteView(DeleteView):
 
 class PersonaQueryView(View):
   def get(self, request, *args, **kwargs):
-    return HttpResponse('Hola Mundo con Clases')
+    queryset = Persona.objects.filter(edad__lte ='40')
+    return JsonResponse(list(queryset.values()), safe= False)

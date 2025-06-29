@@ -162,3 +162,6 @@ creacion de personas/persona_confirm_delete.html; modificaciones: creacion de vi
 La vista base View
 La clase View es la vista base de todas las demás
 nueva vista PersonaQueryView() e import HttpResponse, agregacion de path
+
+Devolviendo Json
+modificacion de la vista PersonaQueyView +queryset + return JsonResponse
