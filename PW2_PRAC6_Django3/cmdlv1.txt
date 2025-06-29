@@ -154,3 +154,8 @@ modificaciones: personas/urls.py +path; views.py + class PersonaCreateView(); pe
 UpdateView
 reutiliza el formulario de CreateView >> creacion de vista, agreagacion de url (path en urls.py)
 
+DeleteView - reverse_lazy() 
+Una versión perezosamente evaluada de reverse()
+Perezosa se refiere a que no se llega a ejecutar a menos que sea necesario
+creacion de personas/persona_confirm_delete.html; modificaciones: creacion de vista PersonaDeleteView y agregacion de path en urls.py
+
