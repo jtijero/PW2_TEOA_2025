@@ -165,3 +165,15 @@ nueva vista PersonaQueryView() e import HttpResponse, agregacion de path
 
 Devolviendo Json
 modificacion de la vista PersonaQueyView +queryset + return JsonResponse
+
+Archivos estáticos
+Los sitios web generalmente necesitan servir archivos adicionales como imágenes, JavaScript o CSS. En Django, nos referimos a estos archivos como "archivos estáticos".
+creacion de personas/static/personas y colocar imagen descargada en esa carpeta; modificacion de base.html
+y tambien de listacontactos/settings.py
+
+python manage.py collectstatic
+	(destino) C:\Users\TIJERO\Desktop\PW2_TEOA_2025\PW2_PRAC6_Django3\src\listaContactos [main ≡ +1 ~4 -0 !]> python manage.py collectstatic
+Found another file with the destination path 'personas\logo_unsa.png'. It will be ignored since only the first encountered file is collected. If this is not what you want, make sure every static file has a unique path.
+
+128 static files copied to 'C:\Users\TIJERO\Desktop\PW2_TEOA_2025\PW2_PRAC6_Django3\src\listaContactos\static'.
+Reiniciar servidor
