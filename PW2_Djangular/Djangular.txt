@@ -1,0 +1,31 @@
+REM Crear carpeta y entrar en ella
+mkdir djangular
+cd djangular
+
+REM Crear entorno virtual en Windows
+python -m venv venv
+
+REM Activar entorno virtual (en CMD)
+venv\Scripts\activate
+
+REM En PowerShell, si da error por política de ejecución:
+REM Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+REM Instalar Django y Django REST Framework
+pip install django
+pip install djangorestframework
+
+REM Crear el proyecto Django en el directorio actual
+django-admin startproject djangocrud .
+
+REM Crear una aplicación llamada api
+django-admin startapp api
+
+REM Aplicar migraciones iniciales
+python manage.py migrate
+
+REM Crear superusuario (sigue instrucciones en consola)
+python manage.py createsuperuser
+
+REM Ejecutar el servidor
+python manage.py runserver
