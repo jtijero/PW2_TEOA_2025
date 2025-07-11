@@ -1,6 +1,6 @@
 REM Crear carpeta y entrar en ella
-mkdir djangular
-cd djangular
+mkdir PW2_Djangular
+cd PW2_Djangular
 
 REM Crear entorno virtual en Windows
 python -m venv venv
@@ -29,3 +29,15 @@ python manage.py createsuperuser
 
 REM Ejecutar el servidor
 python manage.py runserver
+
+
+Crear el archivo serializers.py en /api/
+modificar djangular/api/admin.py Registrar el modelo Movie en el admin de Django
+Modificar settings.py para registrar la app y DRF (rest_framework)
+
+
+modificacion de djangular/api/models.py
+REM Ejecutar migraciones
+python manage.py makemigrations
+python manage.py migrate
+
