@@ -47,3 +47,18 @@ creación de ruta base de API y
 REM Compatibilidad Angular CORS > Adelantando >
 pip install django-cors-headers
 > En settings.py, se añade 'corsheaders' a INSTALLED_APPS 
+
+
+
+modificación en djangular/api/views.py
+Se define el MovieViewSet en views.py
+
+Con este ViewSet, DRF generará automáticamente los endpoints para:
+
+GET /api/movie/ → lista todas las películas
+POST /api/movie/ → crea una nueva
+GET /api/movie/:id/ → obtiene una
+PUT /api/movie/:id/ → actualiza una
+DELETE /api/movie/:id/ → elimina una
+
+Todo esto es ideal para que Angular 20 consuma la API sin problemas.
