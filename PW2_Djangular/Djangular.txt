@@ -90,6 +90,6 @@ modificación de src/app/app.ts
 modificación de src/app/api.ts
 modificación de src/app/app.html
 
-
+Configurar settings.py para aceptar peticiones desde Angular
 
 
