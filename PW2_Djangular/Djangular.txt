@@ -41,3 +41,9 @@ REM Ejecutar migraciones
 python manage.py makemigrations
 python manage.py migrate
 
+
+djangular/djangocrud/urls.py
+creación de ruta base de API y 
+REM Compatibilidad Angular CORS > Adelantando >
+pip install django-cors-headers
+> En settings.py, se añade 'corsheaders' a INSTALLED_APPS 
