@@ -1,0 +1,16 @@
+<h2>Lista de Movies:</h2>
+
+<ul *ngIf="movies && movies.length > 0; else sinPeliculas">
+
+  <li *ngFor="let movie of movies">
+    <h3>
+      {{ movie.id }}: Título: {{ movie.title }}<br>
+      Año: {{ movie.year }}
+    </h3>
+    <pre>{{ movie | json }}</pre>
+  </li>
+</ul>
+
+<ng-template #sinPeliculas>
+  <p>No hay películas cargadas.</p>
+</ng-template>

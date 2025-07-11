@@ -62,3 +62,34 @@ PUT /api/movie/:id/ → actualiza una
 DELETE /api/movie/:id/ → elimina una
 
 Todo esto es ideal para que Angular 20 consuma la API sin problemas.
+
+
+
+Angular
+Abrir una nueva terminal 
+cd ruta\a\tu\proyecto\djangular > sin estar dentro del entorno angular > deactivate
+npm install -g @angular/cli
+ng new crud > No zoneless > CSS > Yes
+cd crud
+ng serve
+ng generate service api > dentro de crud/
+
+REM esto creara 2 archivos
+src/app/api.service.ts
+src/app/api.service.spec.ts
+
+REM Se usa un proyecto de Angular 20.0.5 en modo full standalone 
+y el nuevo esquema de archivos a lo Angular Signals + SSR (Server-Side Rendering).
+
+
+
+REM Requisitos:
+HttpClientModule proporcionado en app.config.ts
+modificación de src/app/app.config.ts
+modificación de src/app/app.ts
+modificación de src/app/api.ts
+modificación de src/app/app.html
+
+
+
+
