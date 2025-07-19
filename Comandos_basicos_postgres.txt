@@ -1,0 +1,101 @@
+Comandos postgres cmd
+constraseña 7410
+
+\l Ver bases de datos instaladas en nuestro sistema
+CREATE DATABASE colegio; (puede ser en minusculas)
+DROP DATABASE bd_cooperativapost; EJM
+
+\c colegio se usa para conectarse a una base de datos especifica
+
+\dt ver tabla creada
+\d muestra la estructura de una tabla en PostgreSQL
+
+Cambiar nombre de una tabla
+ALTER TABLE modifica la estructura de una tabla existente en PostgreSQL
+ALTER TABLE estudiantes RENAME TO estudiante;
+\dt
+
+Agregar campos a una tabla
+(se nos olvido un campo por ejm)
+ALTER TABLE estudiante ADD COLUMN telefono VARCHAR(30);
+\d estudiante
+
+Modificar atributos de una tabla
+ALTER TABLE estudiante ALTER COLUMN edad TYPE SMALLINT;
+\d estudiante
+
+Eliminar columnas de una tabla
+ALTER TABLE estudiante DROP COLUMN telefono;
+\d estudiante
+
+Eliminar una tabla
+DROP TABLE estudiante; Son permanentes
+
+Insertar y Consultar Datos es Postgres
+
+postgres=# \c colegio
+Ahora está conectado a la base de datos «colegio» con el usuario «postgres».
+colegio=# create table estudiantes (
+colegio(# id serial primary key,
+colegio(# nombre varchar(100),
+colegio(# edad int,
+colegio(# correo text);
+CREATE TABLE
+colegio=#
+
+INSERT INTO estudiantes(nombre, edad, correo) VALUES ('Lucciano','19','jtijero@gmail.com'); y se puede añadir otro paréntesis usando una coma
+
+INSERT INTO estudiantes (nombre, edad, correo) VALUES
+('Juan Pérez', 20, 'juan.perez@example.com'),
+('Ana Torres', 22, 'ana.torres@example.com'),
+('Luis Gómez', 19, 'luis.gomez@example.com'),
+('María Sánchez', 21, 'maria.sanchez@example.com'),
+('Carlos Ruiz', 23, 'carlos.ruiz@example.com'),
+('Laura Díaz', 18, 'laura.diaz@example.com'),
+('Pedro López', 24, 'pedro.lopez@example.com'),
+('Sofía Herrera', 20, 'sofia.herrera@example.com'),
+('Miguel Castro', 22, 'miguel.castro@example.com'),
+('Valentina Morales', 19, 'valentina.morales@example.com'),
+('Andrés Molina', 25, 'andres.molina@example.com'),
+('Camila Rojas', 21, 'camila.rojas@example.com'),
+('Diego Vargas', 20, 'diego.vargas@example.com'),
+('Daniela Navarro', 23, 'daniela.navarro@example.com'),
+('Felipe Ortega', 22, 'felipe.ortega@example.com'),
+('Gabriela Paredes', 20, 'gabriela.paredes@example.com'),
+('Ricardo Salinas', 19, 'ricardo.salinas@example.com'),
+('Lucía Mendoza', 18, 'lucia.mendoza@example.com'),
+('Santiago Aguilar', 21, 'santiago.aguilar@example.com'),
+('Isabella Romero', 22, 'isabella.romero@example.com');
+
+Consultas
+select * from estudiantes; Todo el contenido de una tabla
+select nombre, correo from estudiantes;
+Filtros
+select * from estudiantes where edad >=20;
+select * form estudiantes order by edad asc; (edad orden ascendente)
+select * from estudiantes order by nombre desc;
+
+Con limites
+select * from estudiantes limit 4; (primeros 4 registros)
+
+Buscar estudiantes que su nombre empieze por A
+select * from estudiantes where nombre like 'A%';
+Los que terminan con a
+select * from estudiantes where nombre like '%a';
+En su nombre tengan en'
+select * from estudiantes where nombre like '%en%';
+
+
+Actualizar y borrar datos de una tabla
+
+Forma Basica del uso del comando UPDATE
+UPDATE en postgre se usa para modificar datos existentes en una tabla
+set (para indicar cuales son los nuevos valores que queremos asignar a cada campo
+update estudiantes set nombre = 'Lucciano Tijero' where id ='1';
+update estudiantes set nombre = 'Laura Ruiz', edad ='20' where id ='9';
+
+Rango
+colocar de tal id a tal id un mismo correo
+update estudiantes set correo ='test@gmail.com' where id between 10 and 15;
+
+delete from estudiantes where id='20';
