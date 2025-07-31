@@ -1,0 +1,109 @@
+hemos creado un app de reservacion de citas usando django y angular, en la que se pueden loguear 2 tipos de usuarios: admin y paciente.
+
+Debemos exponer nuestro trabajo y quiero que dividas la exposicion para 4 personas, me digas el contenido de las diapositivas y crees un guion para cada una. es necesario que te mande todos los archivos del proyecto para que los analices, te los dare poco a poco. Aun no me des el guion hasta que haya mandado todos los archivos
+
+Divide la propuesta detallada ara la exposicion de esta manera:
+Funcionalidad	Responsable	Descripción
+🔐 Iniciar sesión	Persona A	Autenticación de usuario (Angular frontend + Django backend)
+📝 Registro de usuarios	Persona B	Formulario de registro + validaciones
+📋 Selección de especialidad	Persona C	Mostrar especialidades y filtrar médicos
+📅 Reserva de citas	Persona D	Calendario, horario disponible, guardar cita
+🧾 Mi perfil / Mis citas	Persona E	Ver información del usuario, historial de citas
+
+y espera a que te mande todos los archivos necesarios para que me des un guion preciso, listame en orden todos los archivos necesarios que debo de mandarte
+
+estructura del proyecto:
+\Proyecto_Final_Angular\clinica\clinica\__pycache__
+\Proyecto_Final_Angular\clinica\clinica\__init__.py
+\Proyecto_Final_Angular\clinica\clinica\asgi.py
+\Proyecto_Final_Angular\clinica\clinica\settings.py
+\Proyecto_Final_Angular\clinica\clinica\urls.py
+\Proyecto_Final_Angular\clinica\clinica\wsgi.py
+
+\Proyecto_Final_Angular\clinica\env\
+
+\Proyecto_Final_Angular\clinica\gestion\__pycache__\
+\Proyecto_Final_Angular\clinica\gestion\migrations\
+\Proyecto_Final_Angular\clinica\gestion\static\angular\browser\
+\Proyecto_Final_Angular\clinica\gestion\static\angular\3rdpartylicenses.txt
+\Proyecto_Final_Angular\clinica\gestion\static\angular\prerendered-routes.json
+
+\Proyecto_Final_Angular\clinica\gestion\templates\index.html
+
+\Proyecto_Final_Angular\clinica\gestion\__init__.py
+\Proyecto_Final_Angular\clinica\gestion\admin.py
+\Proyecto_Final_Angular\clinica\gestion\app.py
+\Proyecto_Final_Angular\clinica\gestion\forms.py
+\Proyecto_Final_Angular\clinica\gestion\models.py
+\Proyecto_Final_Angular\clinica\gestion\serializers.py
+\Proyecto_Final_Angular\clinica\gestion\test.py
+\Proyecto_Final_Angular\clinica\gestion\urls.py
+\Proyecto_Final_Angular\clinica\gestion\views.py
+
+\Proyecto_Final_Angular\clinica\db.sqlite3
+\Proyecto_Final_Angular\clinica\manage.py
+
+\Proyecto_Final_Angular\frontend-citas\.angular\cache\20.0.5\
+
+\Proyecto_Final_Angular\frontend-citas\.vscode\extensions.json
+\Proyecto_Final_Angular\frontend-citas\.vscode\launch.json
+\Proyecto_Final_Angular\frontend-citas\.vscode\tasks.json
+
+\Proyecto_Final_Angular\frontend-citas\node_modules
+
+\Proyecto_Final_Angular\frontend-citas\public\favicon.ico
+
+\Proyecto_Final_Angular\frontend-citas\src\app\layout\footer\  footer.css footer.html footer.spec.ts  footer.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\layout\navbar\  navbar.css navbar.html navbar.spec.ts  navbar.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\especialidades\ especialidades.css especialidades.html especialidades.spec.ts especialidades.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\home\  home.css home.html home.spec.ts home.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\login\  login.css login.html login.spec.ts login.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\nosotros\ nosotros.css nosotros.html nosotros.spec.ts nosotros.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\panel-admin\  panel-admin.css panel-admin.html panel-admin.spec.ts panel-admin.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\panel-admin-citas\  panel-admin-citas.css panel-admin-citas.html panel-admin-citas.spec.ts panel-admin-citas.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\panel-admin-especialidades\ panel-admin-especialidades.css panel-admin-especialidades.html panel-admin-especialidades.spec.ts panel-admin-especialidades.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\panel-admin-medicos\  panel-admin-medicos.css panel-admin-medicos.html panel-admin-medicos.spec.ts panel-admin-medicos.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\panel-paciente\ panel-paciente.css panel-paciente.html panel-paciente.spec.ts panel-paciente.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\perfil-paciente\ perfil-paciente.css perfil-paciente.html perfil-paciente.spec.ts perfil-paciente.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\register\ register.css register.html register.spec.ts register.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\pages\panel-pacientes.ts
+
+\Proyecto_Final_Angular\frontend-citas\src\app\services\admin-citas.service.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\admin-horarios.service.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\admin-medicos.service.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\admin-pacientes.service.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\auth.spec.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\auth.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\csrf-interceptor.spec.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\csrf-interceptor.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\especialidad.service.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\jwt-interceptor.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\services\refresh-token.interceptor.ts
+
+\Proyecto_Final_Angular\frontend-citas\src\app\app.config.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\app.css
+\Proyecto_Final_Angular\frontend-citas\src\app\app.html
+\Proyecto_Final_Angular\frontend-citas\src\app\app.routes.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\app.spec.ts
+\Proyecto_Final_Angular\frontend-citas\src\app\app.ts
+
+\Proyecto_Final_Angular\frontend-citas\src\assets\images\medico-principal.jpg
+\Proyecto_Final_Angular\frontend-citas\src\index.html
+\Proyecto_Final_Angular\frontend-citas\src\main.ts
+\Proyecto_Final_Angular\frontend-citas\src\styles.css
+
+\Proyecto_Final_Angular\frontend-citas\.editorconfig
+\Proyecto_Final_Angular\frontend-citas\.gitignore
+\Proyecto_Final_Angular\frontend-citas\angular.json
+\Proyecto_Final_Angular\frontend-citas\dist.zip
+\Proyecto_Final_Angular\frontend-citas\package.json
+\Proyecto_Final_Angular\frontend-citas\package-lock.json
+\Proyecto_Final_Angular\frontend-citas\tsconfig.app.json
+\Proyecto_Final_Angular\frontend-citas\tsconfig.json
+\Proyecto_Final_Angular\frontend-citas\tsconfig.spec.json
+
+\Proyecto_Final_Angular\.gitignore
+\Proyecto_Final_Angular\dist.zip
+\Proyecto_Final_Angular\README.md
+\Proyecto_Final_Angular\Guia.txt
+\Proyecto_Final_Angular\requirements.txt
